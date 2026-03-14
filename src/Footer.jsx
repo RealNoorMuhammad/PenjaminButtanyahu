@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer-right">
           <h3 className="footer-heading">Socials</h3>
           <div className="footer-socials">
-            <a href="#twitter" className="footer-social-link" aria-label="X Twitter">
+            <a href="https://x.com/i/communities/2032850146296295488" className="footer-social-link" aria-label="X Twitter" target="_blank" rel="noopener noreferrer">
               <img src={twitterIcon} alt="X" className="footer-social-icon" />
             </a>
             <a href="#dex" className="footer-social-link" aria-label="DEX">

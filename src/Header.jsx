@@ -9,7 +9,7 @@ function Header() {
 
   return (
     <header className="site-header">
-      <a href="#x" className="header-side header-left" aria-label="X Twitter">
+      <a href="https://x.com/i/communities/2032850146296295488" className="header-side header-left" aria-label="X Twitter" target="_blank" rel="noopener noreferrer">
         <img src={twitterIcon} alt="X" className="header-side-icon" />
      
       </a>
