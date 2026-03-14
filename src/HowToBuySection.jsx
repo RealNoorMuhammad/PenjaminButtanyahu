@@ -9,7 +9,7 @@ const steps = [
   {
     num: '2',
     title: 'Get some SOL',
-    text: 'Put some $SOL in your wallet. You can buy it in Phantom or send it from somewhere else.',
+    text: 'Put some SOL in your wallet. You can buy it in Phantom or send it from somewhere else.',
   },
   {
     num: '3',
