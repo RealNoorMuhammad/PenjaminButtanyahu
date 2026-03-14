@@ -1,0 +1,114 @@
+.how-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #fff8f0 0%, #ffe8dc 50%, #fff4ee 100%);
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.how-heading {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #b5341e;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.how-intro {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: 1.25rem;
+  color: #5c3d32;
+  text-align: center;
+  margin: 0 0 2.5rem;
+  font-weight: 600;
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.how-step {
+  background: #fff;
+  padding: 1.75rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 3px solid #b5341e;
+  box-shadow:
+    0 6px 0 #8a2818,
+    0 8px 20px rgba(181, 52, 30, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.how-step:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 0 #8a2818,
+    0 12px 24px rgba(181, 52, 30, 0.25);
+}
+
+.how-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #fff;
+  background: #b5341e;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 0 #8a2818;
+}
+
+.how-title {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2d1f1b;
+  margin: 0 0 0.5rem;
+}
+
+.how-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a372f;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .how-section {
+    padding: 3rem 1.25rem;
+  }
+
+  .how-steps {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .how-heading {
+    font-size: 2rem;
+  }
+
+  .how-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .how-step {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .how-num {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+}

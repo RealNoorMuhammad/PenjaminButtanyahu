@@ -1,0 +1,86 @@
+.contract-section {
+  --hero-blue: #005EB8;
+  background-color: #000;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contract-label {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.contract-address {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.contract-copy {
+  background: #fff;
+  color: var(--hero-blue);
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.contract-copy:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.contract-copy:active {
+  transform: scale(0.98);
+}
+
+/* Falling bombs overlay when Copy is clicked */
+.bombs-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.bomb {
+  position: absolute;
+  top: -60px;
+  font-size: 2rem;
+  animation: bomb-fall linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes bomb-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .contract-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contract-address {
+    font-size: 0.75rem;
+    word-break: break-all;
+    text-align: center;
+  }
+}

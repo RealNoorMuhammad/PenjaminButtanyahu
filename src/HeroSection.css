@@ -1,0 +1,122 @@
+.hero-section {
+  --hero-blue: #093daa;
+  background-color: var(--hero-blue);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 50% at 20% 50%,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  max-width: 520px;
+}
+
+.hero-title {
+  font-family: 'Kids', cursive, Georgia, serif;
+  font-size: clamp(3rem, 12vw, 14rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin: 0 0 0.5rem 0;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.25),
+    0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-tagline {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-left {
+    text-align: center;
+    max-width: none;
+  }
+
+  .hero-image {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 2rem 1rem;
+    min-height: 65vh;
+  }
+
+  .hero-inner {
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-image {
+    max-width: 260px;
+  }
+}

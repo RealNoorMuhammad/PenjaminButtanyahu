@@ -1,0 +1,43 @@
+.community-section {
+  --hero-blue: #005EB8;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.community-section .section-heading {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--hero-blue);
+  margin: 0 0 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.community-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.community-link {
+  padding: 0.6rem 1.5rem;
+  background: var(--hero-blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.community-link:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .community-section .section-heading {
+    font-size: 1.75rem;
+  }
+}

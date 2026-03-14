@@ -1,0 +1,53 @@
+.tokenomics-section {
+  --hero-blue: #005EB8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.tokenomics-section .section-heading {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--hero-blue);
+  margin: 0 0 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tokenomics-card {
+  background: linear-gradient(135deg, var(--hero-blue) 0%, #004a94 100%);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 94, 184, 0.3);
+}
+
+.tokenomics-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.tokenomics-desc {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .tokenomics-section {
+    padding: 3rem 1rem;
+  }
+
+  .tokenomics-section .section-heading {
+    font-size: 1.75rem;
+  }
+}

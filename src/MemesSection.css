@@ -1,0 +1,155 @@
+.memes-section {
+  --hero-blue: #005EB8;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.memes-section .section-heading {
+  font-family: 'Kids', cursive, system-ui, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--hero-blue);
+  margin: 0 0 2rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.memes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.meme-card {
+  aspect-ratio: 1;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 94, 184, 0.2);
+  background: #fff;
+  min-height: 240px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meme-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.meme-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lightbox */
+.meme-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 2rem;
+  animation: lightboxFadeIn 0.2s ease;
+}
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.meme-lightbox-inner {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme-lightbox-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-size: 2.25rem;
+  line-height: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+  z-index: 10001;
+  padding: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.meme-lightbox-close:hover {
+  background: #e0e0e0;
+  transform: scale(1.1);
+}
+
+.meme-lightbox-close span {
+  display: block;
+  margin-top: -2px;
+  font-weight: 300;
+}
+
+.meme-lightbox-img {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: lightboxZoom 0.25s ease;
+}
+
+@keyframes lightboxZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .memes-section {
+    padding: 3rem 1rem;
+  }
+
+  .memes-section .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .memes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .meme-card {
+    min-height: 280px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

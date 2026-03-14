@@ -1,0 +1,28 @@
+.name-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.name-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 1.5rem 2.5rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, var(--social-bg) 100%);
+  border: 2px solid var(--accent-border);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 600px) {
+  .name-title {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+  }
+}

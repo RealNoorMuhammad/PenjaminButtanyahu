@@ -1,0 +1,62 @@
+.flag-marquee-section {
+  width: 100%;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.flag-marquee-border {
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  overflow: hidden;
+  padding: 0.6rem 0;
+}
+
+.flag-marquee-wrapper {
+  display: flex;
+  width: max-content;
+  animation: flag-marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.flag-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.flag-marquee-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+@keyframes flag-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .flag-marquee-border {
+    padding: 0.5rem 0;
+    border-width: 4px;
+  }
+
+  .flag-marquee-img {
+    height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flag-marquee-wrapper {
+    animation-duration: 55s;
+  }
+}
