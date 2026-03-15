@@ -27,7 +27,7 @@ function Header() {
         )}
       </a>
 
-      <a href="#dex" className="header-side header-right">
+      <a href="https://dexscreener.com/solana/6MUQneA8iGgfKrxkZQxg4zw4S1hrCav53nNgtYVJaUVK" className="header-side header-right" aria-label="DexScreener" target="_blank" rel="noopener noreferrer">
         <img src={dexpIcon} alt="DEX" className="header-side-icon" />
        
       </a>

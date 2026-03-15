@@ -16,7 +16,7 @@ function Footer() {
             <a href="https://x.com/i/communities/2032850146296295488" className="footer-social-link" aria-label="X Twitter" target="_blank" rel="noopener noreferrer">
               <img src={twitterIcon} alt="X" className="footer-social-icon" />
             </a>
-            <a href="#dex" className="footer-social-link" aria-label="DEX">
+            <a href="https://dexscreener.com/solana/6MUQneA8iGgfKrxkZQxg4zw4S1hrCav53nNgtYVJaUVK" className="footer-social-link" aria-label="DexScreener" target="_blank" rel="noopener noreferrer">
               <img src={dexpIcon} alt="DEX" className="footer-social-icon" />
             </a>
           </div>

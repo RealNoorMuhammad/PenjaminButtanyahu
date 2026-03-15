@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './ContractAddress.css'
 
-const PLACEHOLDER_CA = 'Coming Soon wait '
+const PLACEHOLDER_CA = '6pL6aUFiFASsr652J33mJNJvCFNEpXrRaUSW8R2Ppump'
 
 const BOMB_COUNT = 24
 const FALL_DURATION_MS = 10000
